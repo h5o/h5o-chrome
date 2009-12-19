@@ -55,9 +55,7 @@
     </target>
 	
 	<target name="release" depends="all">
-		<!--<property name="H5O_RELEASE_JS" value="${DIST_DIR}/outliner.${VERSION}.js" />-->
-
-		<!--<replace token="@VERSION" value="${VERSION}" file="${H5O_RELEASE_BOOKMARKLET}" />-->
+		<zip destfile="${DIST_DIR}/outliner.${VERSION}.zip" basedir="${DEBUG_DIR}" includes="*.*" />
 	</target>
  
 </project>
