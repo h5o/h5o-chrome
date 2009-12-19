@@ -24,9 +24,12 @@
 
     <!-- MAIN -->
 	<target name="debug" description="Debug H5O for Chrome build">
-        <echo message="Building ${H5O_DEBUG}" />
+        <echo message="Building unpacked extension" />
         <mkdir dir="${DIST_DIR}" />
 		<mkdir dir="${DEBUG_DIR}" />
+		
+		<subant target="debug" buildpath="../h5o-js" />
+		<copy file="../h5o-js/dist/outliner.debug.js" tofile="${DEBUG_DIR}/outliner.debug.js" />
 		
 		<copy file="${SRC_DIR}/manifest.json" tofile="${DEBUG_DIR}/manifest.json" />
 		<replace token="@VERSION" value="${VERSION}" file="${DEBUG_DIR}/manifest.json" />
@@ -40,7 +43,7 @@
         </concat>
 
 		
-        <echo message="${H5O_DEBUG} built." />
+        <echo message="Unpacked extension built." />
 	</target>
  
     <target name="clean">
