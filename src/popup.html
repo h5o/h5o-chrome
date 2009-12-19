@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Outline</title>
+		<style type="text/css">
+			body
+			{
+				font-family: Verdana, Arial, sans-serif;
+				color: #000;
+				background-color: #fff;
+				font-size: 11px;
+			}
+			#outline
+			{
+				width: 500px;
+			}
+		</style>
+		<script type="text/javascript">
+			var outlineDone = false;
+			function createOutline()
+			{
+				console.log("Is outline done?" + outlineDone);
+				if (outlineDone) return;
+				
+				chrome.tabs.getSelected(null, function(tab)
+				{
+					chrome.tabs.sendRequest(tab.id, {msg: "getOutline"}, function(outline)
+					{
+						var elOutline = document.getElementById('outline');
+						elOutline.innerHTML = outline;
+					});
+				});
+				outlineDone = true;
+			}
+		</script>
+	</head>
+	<body onload="createOutline()" onclick="if (event.target.tagName!='A') window.close();">
+		<div id="outline">Loading...</div>
+	</body>
+</html>

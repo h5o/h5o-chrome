@@ -1,0 +1,26 @@
+{
+	"name": "HTML5 Outliner",
+	"version": "@VERSION",
+	
+	"description": "This extension produces an outline of the page, using the algorithm described in HTML5 specification",
+	
+	"background_page": "background.html",
+	
+	"permissions": [
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	],
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["createOutline.js"]
+		}
+	],	
+	
+	"page_action": {
+		"default_icon": "icon.png",
+		"default_title": "Outline",
+		"popup": "popup.html"
+	}
+}
