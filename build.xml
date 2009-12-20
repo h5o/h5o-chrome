@@ -37,6 +37,7 @@
 		<copy file="${SRC_DIR}/icon.png" tofile="${DEBUG_DIR}/icon.png" />
 		<copy file="${SRC_DIR}/background.html" tofile="${DEBUG_DIR}/background.html" />
 		<copy file="${SRC_DIR}/popup.html" tofile="${DEBUG_DIR}/popup.html" />
+		<copy file="MIT-LICENSE.txt" tofile="${DEBUG_DIR}/MIT-LICENSE.txt" />
         <concat destfile="${DEBUG_DIR}/createOutline.js">
             <fileset dir="${DEBUG_DIR}" includes="outliner.debug.js" />
             <fileset dir="${SRC_DIR}" includes="createOutline.js" />
