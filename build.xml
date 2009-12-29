@@ -56,7 +56,7 @@
     </target>
 	
 	<target name="release" depends="all">
-		<zip destfile="${DIST_DIR}/outliner.${VERSION}.zip" basedir="${DEBUG_DIR}" includes="*.*" />
+		<zip destfile="${DIST_DIR}/outliner.${VERSION}.zip" basedir="${DEBUG_DIR}" includes="**/*" />
 	</target>
  
 </project>
