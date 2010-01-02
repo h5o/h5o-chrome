@@ -34,7 +34,11 @@
 		<copy file="${SRC_DIR}/manifest.json" tofile="${DEBUG_DIR}/manifest.json" />
 		<replace token="@VERSION" value="${VERSION}" file="${DEBUG_DIR}/manifest.json" />
 
-		<copy file="${SRC_DIR}/icon.png" tofile="${DEBUG_DIR}/icon.png" />
+		<copy todir="${DEBUG_DIR}/img">
+			<fileset dir="${SRC_DIR}/img">
+				<include name="*.png" />
+			</fileset>
+		</copy>
 		<copy file="${SRC_DIR}/background.html" tofile="${DEBUG_DIR}/background.html" />
 		<copy file="${SRC_DIR}/popup.html" tofile="${DEBUG_DIR}/popup.html" />
 		<copy file="MIT-LICENSE.txt" tofile="${DEBUG_DIR}/MIT-LICENSE.txt" />

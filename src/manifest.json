@@ -2,7 +2,9 @@
 	"name": "HTML5 Outliner",
 	"version": "@VERSION",
 	
-	"description": "This extension produces an outline of the page, using the algorithm described in HTML5 specification",
+	"description": "Generates a navigable page outline with heading and sectioning elements",
+
+	"icons": { "48" : "img/48.png", "128" : "img/128.png" },
 	
 	"background_page": "background.html",
 	
@@ -19,7 +21,7 @@
 	],	
 	
 	"page_action": {
-		"default_icon": "icon.png",
+		"default_icon": "img/16.png",
 		"default_title": "Outline",
 		"popup": "popup.html"
 	}
