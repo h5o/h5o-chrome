@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Outline</title>
+		<meta charset="utf-8"/>
 		<style type="text/css">
 			body
 			{
@@ -14,13 +15,23 @@
 			{
 				width: 500px;
 			}
+			#closeLink
+			{
+				float: right;
+				width: 12px;
+				height: 16px;
+				text-indent: -999px;
+				text-decoration: none;
+				background:url('img/close.png') no-repeat 50% -16px;
+			}
+			#closeLink:hover
+			{
+				background-position: 50% 0;
+			}
 		</style>
 		<script type="text/javascript">
-			var outlineDone = false;
 			function createOutline()
 			{
-				if (outlineDone) return;
-				
 				chrome.tabs.getSelected(null, function(tab)
 				{
 					chrome.tabs.sendRequest(tab.id, {msg: "getOutline"}, function(outline)
@@ -29,11 +40,11 @@
 						elOutline.innerHTML = outline;
 					});
 				});
-				outlineDone = true;
 			}
 		</script>
 	</head>
-	<body onload="createOutline()" onclick="if (event.target.tagName!='A') window.close();">
+	<body onload="createOutline()">
+		<a id="closeLink" href="javascript:window.close();">Close</a>
 		<div id="outline">Loading...</div>
 	</body>
 </html>
