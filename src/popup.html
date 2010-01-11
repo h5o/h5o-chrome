@@ -38,6 +38,16 @@
 					{
 						var elOutline = document.getElementById('outline');
 						elOutline.innerHTML = outline;
+						
+						var links = elOutline.getElementsByTagName('a');
+						for (var i=0; i < links.length; i++) {
+							links[i].onclick=function(e) {
+								e.preventDefault();
+								var href = e.target.href,
+									hash = href.substring(href.indexOf('#'));
+								chrome.tabs.sendRequest(tab.id, {msg: "jumpTo", hash: hash});
+							}
+						}
 					});
 				});
 			}
