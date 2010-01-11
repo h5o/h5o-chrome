@@ -19,8 +19,8 @@ if (window == top) { /* if we loaded a parent page, show the action */
 	var highlight = function(id)
 	{
 		var el = document.getElementById(id);
-		alert(id);
-		var currentOpacity = window.getComputedStyle(el).opacity;
+		var currentOpacity = window.getComputedStyle(el).opacity,
+			currentTransition = window.getComputedStyle(el).webkitTransition;
 		
 		var duration=200, 
 			itr=0;
@@ -33,6 +33,8 @@ if (window == top) { /* if we loaded a parent page, show the action */
 			if (itr < 3) {
 				itr++;
 				setTimeout(blink, duration);
+			} else {
+				el.style.webkitTransition = currentTransition;
 			}
 		}
 		blink();
