@@ -44,8 +44,8 @@
 							links[i].onclick=function(e) {
 								e.preventDefault();
 								var href = e.target.href,
-									hash = href.substring(href.indexOf('#'));
-								chrome.tabs.sendRequest(tab.id, {msg: "jumpTo", hash: hash});
+									id = href.substring(href.indexOf('#')+1);
+								chrome.tabs.sendRequest(tab.id, {msg: "jumpTo", id: id});
 							}
 						}
 					});
