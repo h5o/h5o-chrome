@@ -46,7 +46,8 @@
             <fileset dir="${DEBUG_DIR}" includes="outliner.debug.js" />
             <fileset dir="${SRC_DIR}" includes="createOutline.js" />
         </concat>
-
+        
+        <delete file="${DEBUG_DIR}/outliner.debug.js"/>
 		
         <echo message="Unpacked extension built." />
 	</target>
