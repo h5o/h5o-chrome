@@ -39,15 +39,16 @@
 				<include name="*.png" />
 			</fileset>
 		</copy>
-		<copy file="${SRC_DIR}/background.html" tofile="${DEBUG_DIR}/background.html" />
+		<copy file="${SRC_DIR}/background.js" tofile="${DEBUG_DIR}/background.js" />
 		<copy file="${SRC_DIR}/popup.html" tofile="${DEBUG_DIR}/popup.html" />
+		<copy file="${SRC_DIR}/popup.js" tofile="${DEBUG_DIR}/popup.js" />
 		<copy file="MIT-LICENSE.txt" tofile="${DEBUG_DIR}/MIT-LICENSE.txt" />
-        <concat destfile="${DEBUG_DIR}/createOutline.js">
-            <fileset dir="${DEBUG_DIR}" includes="outliner.debug.js" />
-            <fileset dir="${SRC_DIR}" includes="createOutline.js" />
-        </concat>
-        
-        <delete file="${DEBUG_DIR}/outliner.debug.js"/>
+		<concat destfile="${DEBUG_DIR}/createOutline.js">
+			<fileset dir="${DEBUG_DIR}" includes="outliner.debug.js" />
+			<fileset dir="${SRC_DIR}" includes="createOutline.js" />
+		</concat>
+
+		<delete file="${DEBUG_DIR}/outliner.debug.js"/>
 		
         <echo message="Unpacked extension built." />
 	</target>

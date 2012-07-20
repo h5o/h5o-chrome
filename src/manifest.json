@@ -1,12 +1,14 @@
 {
 	"name": "HTML5 Outliner",
 	"version": "@VERSION",
-	
+	"manifest_version": 2,	
 	"description": "Generates a navigable page outline with heading and sectioning elements",
 
 	"icons": { "48" : "img/48.png", "128" : "img/128.png" },
 	
-	"background_page": "background.html",
+	"background": {
+		"scripts": ["background.js"]
+	},
 	
 	"permissions": [
 		"tabs",
@@ -23,6 +25,6 @@
 	"page_action": {
 		"default_icon": "img/16.png",
 		"default_title": "Outline",
-		"popup": "popup.html"
+		"default_popup": "popup.html"
 	}
 }
