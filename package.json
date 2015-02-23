@@ -31,9 +31,11 @@
     "grunt": "0.4.x",
     "grunt-browserify": "3.x",
     "grunt-contrib-clean": "0.6.x",
+    "grunt-contrib-compress": "0.13.x",
     "grunt-contrib-copy": "0.8.x",
     "grunt-contrib-watch": "0.6.x",
     "grunt-release": "0.11.x",
-    "load-grunt-tasks": "3.1.x"
+    "load-grunt-tasks": "3.1.x",
+    "time-grunt": "1.x"
   }
 }
