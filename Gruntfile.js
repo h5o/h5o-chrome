@@ -14,8 +14,9 @@ module.exports = function (grunt) {
 				"dest": "dist/extension/outliner.min.js"
 			},
 			"license": {
-				"src": ["MIT-LICENSE.TXT"],
-				"dest": "dist/extension/MIT-LICENSE.TXT"
+				"expand": true,
+				"src": ["MIT-LICENSE.TXT", "README.md"],
+				"dest": "dist/extension/"
 			},
 			"extension": {
 				"expand": true,
@@ -46,6 +47,13 @@ module.exports = function (grunt) {
 		manifest.version = grunt.config.get("pkg.version");
 		grunt.file.write("dist/extension/manifest.json", JSON.stringify(manifest, null, "  "));
 
+	});
+
+	grunt.renameTask("release", "_release");
+	grunt.registerTask("release", function () {
+		var bump = grunt.option("bump");
+		if (bump != "patch" && bump != "minor" && bump != "major") grunt.fail.fatal("Please pass --bump");
+		grunt.task.run(["_release:" + bump]);
 	});
 
 };
