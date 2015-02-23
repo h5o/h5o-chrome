@@ -36,9 +36,9 @@ module.exports = function (grunt) {
 		}
 	});
 
-	grunt.registerTask("default", "Clean build", ["clean:all", "build"]);
+	grunt.registerTask("default", "Clean build", ["clean:all", "build", "compress"]);
 
-	grunt.registerTask("build", "Build unpacked extension", [ "gen-manifest", "copy:h5o", "copy:extension", "copy:license" ]);
+	grunt.registerTask("build", "Build unpacked extension", ["gen-manifest", "copy:h5o", "copy:extension", "copy:license"]);
 
 	grunt.registerTask("gen-manifest", function () {
 
