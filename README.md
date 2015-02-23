@@ -1,8 +1,8 @@
 # HTML5 outliner for Chrome #
 
-The extension is available on Chrome Store: https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo
+The extension is [available on Chrome Store](https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo)
 
-Please see the parent project for the outlining code: https://github.com/h5o/h5o-js
+Please see [the parent project](https://github.com/h5o/h5o-js) for the outlining code.
 
 Published on npm, because it's JS. You can also "Load unpacked extension" from `dist/extension` in Chrome.
 
