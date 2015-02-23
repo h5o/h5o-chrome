@@ -20,6 +20,9 @@ Run `grunt` to produce `dist/extension/`
 
 ## History ##
 
+### v0.6.1 (2015-02-23) ###
+* Minor manifest tweaks
+
 ### v0.6.0 (2015-02-23) ###
 * Rewritten build scripts with [`grunt`](http://gruntjs.com)
 * Published on npm
