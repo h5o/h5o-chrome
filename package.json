@@ -1,0 +1,39 @@
+{
+  "name": "h5o-chrome",
+  "version": "0.5.1",
+  "description": "Extension for Google Chrome / Chromium to generate a navigable page outline based on HTML5 outlining algorithm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/h5o/h5o-chrome.git"
+  },
+  "keywords": [
+    "h5o",
+    "chrome",
+    "chromium",
+    "extension",
+    "html5",
+    "outline"
+  ],
+  "author": {
+    "name": "Dominykas Blyžė",
+    "email": "hello@dominykas.com",
+    "url": "http://www.dominykas.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/h5o/h5o-chrome/issues"
+  },
+  "homepage": "https://github.com/h5o/h5o-chrome",
+  "dependencies": {
+    "h5o": "0.7.x"
+  },
+  "devDependencies": {
+    "grunt": "0.4.x",
+    "grunt-browserify": "3.x",
+    "grunt-contrib-clean": "0.6.x",
+    "grunt-contrib-copy": "0.8.x",
+    "grunt-contrib-watch": "0.6.x",
+    "grunt-release": "0.11.x",
+    "load-grunt-tasks": "3.1.x"
+  }
+}
