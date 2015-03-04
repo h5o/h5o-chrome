@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Outline</title>
-		<meta charset="utf-8"/>
-		<style type="text/css">
-			body
-			{
-				font-family: Verdana, Arial, sans-serif;
-				color: #000;
-				background-color: #fff;
-				font-size: 11px;
-			}
-			#outline
-			{
-				width: 500px;
-			}
-			#closeLink
-			{
-				float: right;
-				width: 12px;
-				height: 16px;
-				text-indent: -999px;
-				text-decoration: none;
-				background:url('img/close.png') no-repeat 50% -16px;
-			}
-			#closeLink:hover
-			{
-				background-position: 50% 0;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="outline">Loading...</div>
-		<script src="popup.js"></script>
-	</body>
+<head>
+	<title>Outline</title>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+		body {
+			font-family: Verdana, Arial, sans-serif;
+			color: #000;
+			background-color: #fff;
+			font-size: 12px;
+		}
+
+		#outline {
+			width: 500px;
+		}
+
+		#footer {
+			font-size: 10px;
+			text-align: right;
+			margin-top: 8px;
+		}
+
+		#footer a {
+			color: #999;
+		}
+
+		a {
+			outline: none;
+			color: #00e;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		li ol {
+			margin-top: 4px;
+			margin-bottom: 6px;
+		}
+	</style>
+</head>
+<body>
+<div id="outline">Loading...</div>
+<div id="footer">
+	<a href="https://github.com/h5o/h5o-chrome/issues" target="_blank">Report bugs</a>,
+	<a href="https://github.com/h5o" target="_blank">outliner source code</a></div>
+<script src="popup.js"></script>
+</body>
 </html>
