@@ -20,6 +20,9 @@ Run `grunt` to produce `dist/extension/`
 
 ## History ##
 
+### v?.?.? (????-??-??) ###
+* Dependency updates
+
 ### v0.6.1 (2015-02-23) ###
 * Minor manifest tweaks
 

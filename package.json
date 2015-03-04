@@ -36,7 +36,7 @@
     "grunt-contrib-copy": "0.8.x",
     "grunt-contrib-watch": "0.6.x",
     "grunt-release": "0.11.x",
-    "h5o": "0.7.x",
+    "h5o": "0.9.x",
     "load-grunt-tasks": "3.1.x",
     "time-grunt": "1.x"
   }
