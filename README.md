@@ -36,3 +36,7 @@ Run `grunt` to produce `dist/extension/`
 
 ### v0.5.1 and earlier ###
 Originally [lived on Google Code](https://code.google.com/p/h5o), if you like archeology 
+
+## crxmake.sh ##
+
+Made available by Google at [https://developer.chrome.com/extensions/crx](https://developer.chrome.com/extensions/crx) under CC-By 3.0 license
