@@ -46,11 +46,11 @@ module.exports = function (grunt) {
 
 		var shelljs = require("shelljs");
 		var passphraseEnvVarName = process.env["H5O_CRX_KEY_PASSPHRASE"] ? "H5O_CRX_KEY_PASSPHRASE" : "";
-		var res = shelljs.exec(grunt.template.process("./crxmake.sh dist/outliner h5o-chrome.key " + passphraseEnvVarName));
+		var res = shelljs.exec(grunt.template.process("./crxmake.sh dist/extension h5o-chrome.key " + passphraseEnvVarName));
 		if (res.code !== 0) {
 			grunt.fail.fatal("Failed building the crx");
 		}
-		shelljs.mv("outliner.crx", grunt.template.process("dist/outliner-v<%= pkg.version %>.crx"));
+		shelljs.mv("extension.crx", grunt.template.process("dist/outliner-v<%= pkg.version %>.crx"));
 	});
 
 	grunt.registerTask("gen-manifest", function () {
