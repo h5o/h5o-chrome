@@ -23,6 +23,13 @@ module.exports = function (grunt) {
 				"cwd": 'src/',
 				"src": ["**"],
 				"dest": "dist/extension/"
+			},
+			"crx": {
+				// crx extension has extra permissions and an update URL
+				"expand": true,
+				"cwd": "dist/extension/",
+				"src": ["**"],
+				"dest": "dist/extension-standalone/"
 			}
 		},
 		"compress": {
@@ -39,18 +46,23 @@ module.exports = function (grunt) {
 
 	grunt.registerTask("default", "Clean build", ["clean:all", "build", "crx", "compress"]);
 
-	grunt.registerTask("build", "Build unpacked extension", ["gen-manifest", "copy:h5o", "copy:extension", "copy:license"]);
+	grunt.registerTask("build", "Build unpacked extension", ["gen-manifest", "copy:h5o", "copy:extension", "copy:license", "copy:crx"]);
 
 	grunt.registerTask("crx", "Build the final crx", function () {
 		if (!process.env["H5O_CRX"]) return;
 
+		var manifest = grunt.file.readJSON("dist/extension/manifest.json");
+		manifest["update_url"] = "https://h5o.github.io/crx-updates.xml";
+		manifest["permissions"].push("file://*");
+		grunt.file.write("dist/extension/manifest.json", JSON.stringify(manifest, null, "  "));
+
 		var shelljs = require("shelljs");
 		var passphraseEnvVarName = process.env["H5O_CRX_KEY_PASSPHRASE"] ? "H5O_CRX_KEY_PASSPHRASE" : "";
-		var res = shelljs.exec(grunt.template.process("./crxmake.sh dist/extension h5o-chrome.key " + passphraseEnvVarName));
+		var res = shelljs.exec(grunt.template.process("./crxmake.sh dist/extension-standalone h5o-chrome.key " + passphraseEnvVarName));
 		if (res.code !== 0) {
 			grunt.fail.fatal("Failed building the crx");
 		}
-		shelljs.mv("extension.crx", grunt.template.process("dist/outliner-v<%= pkg.version %>.crx"));
+		shelljs.mv("extension-standalone.crx", grunt.template.process("dist/outliner-v<%= pkg.version %>.crx"));
 	});
 
 	grunt.registerTask("gen-manifest", function () {
