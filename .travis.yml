@@ -12,6 +12,6 @@ deploy:
   file:
     - "dist/*.crx"
   on:
-    tags:true
+    tags: true
   api_key:
     secure: FoYEgD2LrI5Cs/33z5KsUCiduRO9gLDmVbmO/xkYtPa6fBIolel7A9sO9FrIAgl70yh+r5FjXtYu0yCKchw8rvqCe9Ln3+uaKEbYePzqnWNEiouAbzrygTHTFCTIOTNWsoapBuuWez/bIPV6w2Al1xIydxVghsxd9HW+ZdybQPY=
