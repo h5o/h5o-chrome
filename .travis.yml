@@ -3,7 +3,7 @@ node_js:
   - "io.js"
 env:
   global:
-  - H5O_CRX=true
+    - H5O_CRX=true
     - secure: "BnVLbW85kY3boaBkE9Q2B5EkBs6yEzbUgiUnk+QdkoHs1K1vvXlmQ4Sls5nJU6qKXIV/q2FUTLczfPYFUG76XsqTjWzFdfbs4sQ8OIKWsmSo9AylzKSRuaRJfIKkNdz6JmzQbFOEFal/wTAKYZca3UNIZ7c4hWQ0hMdg1n3rdYM="
 deploy:
   provider: releases
