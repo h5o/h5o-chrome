@@ -41,6 +41,15 @@ module.exports = function (grunt) {
 					"archive": "dist/outliner-v<%= pkg.version %>.zip"
 				}
 			}
+		},
+		"gh-pages": {
+			"options": {
+				base: "dist",
+				add: true,
+				repo: "git@github.com:h5o/h5o.github.io.git",
+				branch: "master"
+			},
+			"src": "crx-updates.xml"
 		}
 	});
 
