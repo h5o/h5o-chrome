@@ -4,7 +4,7 @@
   "description": "Extension for Google Chrome / Chromium to generate a navigable page outline based on HTML5 outlining algorithm",
   "scripts": {
     "prepublish": "node ./node_modules/grunt-cli/bin/grunt",
-    "test": "ls dist/*.crx"
+    "test": "ls dist/*.crx && cat dist/crx-updates.xml"
   },
   "repository": {
     "type": "git",

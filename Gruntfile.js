@@ -63,6 +63,13 @@ module.exports = function (grunt) {
 			grunt.fail.fatal("Failed building the crx");
 		}
 		shelljs.mv("extension-standalone.crx", grunt.template.process("dist/outliner-v<%= pkg.version %>.crx"));
+		grunt.file.write("dist/crx-updates.xml", grunt.template.process(grunt.file.read("./crx-updates.xml.ejs"), {
+			data: {
+				appId: "dopdihoblkcnhcniellcadnidfmnalmn",
+				version: manifest.version,
+				downloadLink: "https://github.com/h5o/h5o-chrome/releases/download/" + manifest.version + "/outliner-v" + manifest.version + ".crx"
+			}
+		}));
 	});
 
 	grunt.registerTask("gen-manifest", function () {
