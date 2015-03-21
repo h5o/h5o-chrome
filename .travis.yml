@@ -16,6 +16,7 @@ deploy:
     api_key:
       secure: "FoYEgD2LrI5Cs/33z5KsUCiduRO9gLDmVbmO/xkYtPa6fBIolel7A9sO9FrIAgl70yh+r5FjXtYu0yCKchw8rvqCe9Ln3+uaKEbYePzqnWNEiouAbzrygTHTFCTIOTNWsoapBuuWez/bIPV6w2Al1xIydxVghsxd9HW+ZdybQPY="
   - provider: npm
+    skip_cleanup: true
     email: "hello@dominykas.com"
     api_key:
       secure: "E38DnCuORjp08iPoeII3PkkR2e6fM0uWJhOLe2ekBn5RLPSTzWlE8FGm7K73SiUE1l+LG3XWncq1rcmPQKGHC9qlUrc4+oz+9qnw4nuteuCVFbqzGoMPWbxNerXTpLslA07RYPc3FBHmexnVYy7n4KoYYn+66SdxAmR1RqFdZbw="
