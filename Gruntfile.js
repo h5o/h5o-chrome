@@ -50,6 +50,15 @@ module.exports = function (grunt) {
 				branch: "master"
 			},
 			"src": "crx-updates.xml"
+		},
+		"bump": {
+			"options": {
+				commitMessage: 'release %VERSION%',
+				commitFiles: [ "-a" ],
+				tagName: '%VERSION%',
+				tagMessage: 'version %VERSION%',
+				pushTo: 'origin'
+			}
 		}
 	});
 
@@ -91,11 +100,10 @@ module.exports = function (grunt) {
 
 	});
 
-	grunt.renameTask("release", "_release");
 	grunt.registerTask("release", function () {
 		var bump = grunt.option("bump");
 		if (bump != "patch" && bump != "minor" && bump != "major") grunt.fail.fatal("Please pass --bump");
-		grunt.task.run(["_release:" + bump]);
+		grunt.task.run(["checkbranch:master", "checkpending", "bump:" + bump]);
 	});
 
 };
