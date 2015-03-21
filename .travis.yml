@@ -6,12 +6,18 @@ env:
     - H5O_CRX=true
     - secure: "BnVLbW85kY3boaBkE9Q2B5EkBs6yEzbUgiUnk+QdkoHs1K1vvXlmQ4Sls5nJU6qKXIV/q2FUTLczfPYFUG76XsqTjWzFdfbs4sQ8OIKWsmSo9AylzKSRuaRJfIKkNdz6JmzQbFOEFal/wTAKYZca3UNIZ7c4hWQ0hMdg1n3rdYM="
 deploy:
-  provider: releases
-  skip_cleanup: true
-  file_glob: true
-  file:
-    - "dist/*.crx"
-  on:
-    tags: true
-  api_key:
-    secure: FoYEgD2LrI5Cs/33z5KsUCiduRO9gLDmVbmO/xkYtPa6fBIolel7A9sO9FrIAgl70yh+r5FjXtYu0yCKchw8rvqCe9Ln3+uaKEbYePzqnWNEiouAbzrygTHTFCTIOTNWsoapBuuWez/bIPV6w2Al1xIydxVghsxd9HW+ZdybQPY=
+  - provider: releases
+    skip_cleanup: true
+    file_glob: true
+    file:
+      - "dist/*.crx"
+    on:
+      tags: true
+    api_key:
+      secure: "FoYEgD2LrI5Cs/33z5KsUCiduRO9gLDmVbmO/xkYtPa6fBIolel7A9sO9FrIAgl70yh+r5FjXtYu0yCKchw8rvqCe9Ln3+uaKEbYePzqnWNEiouAbzrygTHTFCTIOTNWsoapBuuWez/bIPV6w2Al1xIydxVghsxd9HW+ZdybQPY="
+  - provider: npm
+    email: "hello@dominykas.com"
+    api_key:
+      secure: "E38DnCuORjp08iPoeII3PkkR2e6fM0uWJhOLe2ekBn5RLPSTzWlE8FGm7K73SiUE1l+LG3XWncq1rcmPQKGHC9qlUrc4+oz+9qnw4nuteuCVFbqzGoMPWbxNerXTpLslA07RYPc3FBHmexnVYy7n4KoYYn+66SdxAmR1RqFdZbw="
+    on:
+      tags: true
