@@ -62,8 +62,9 @@ module.exports = function (grunt) {
 
 		var manifest = grunt.file.readJSON("dist/extension/manifest.json");
 		manifest["update_url"] = "https://h5o.github.io/crx-updates.xml";
-		manifest["permissions"].push("file://*");
-		grunt.file.write("dist/extension/manifest.json", JSON.stringify(manifest, null, "  "));
+		manifest["permissions"].push("file://*/*");
+		manifest["content_scripts"][0]["matches"].push("file://*/*");
+		grunt.file.write("dist/extension-standalone/manifest.json", JSON.stringify(manifest, null, "  "));
 
 		var shelljs = require("shelljs");
 		var passphraseEnvVarName = process.env["H5O_CRX_KEY_PASSPHRASE"] ? "H5O_CRX_KEY_PASSPHRASE" : "";
