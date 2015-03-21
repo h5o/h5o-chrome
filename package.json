@@ -3,8 +3,7 @@
   "version": "0.8.8",
   "description": "Extension for Google Chrome / Chromium to generate a navigable page outline based on HTML5 outlining algorithm",
   "scripts": {
-    "install": "[[ $TRAVIS ]] && echo Travis!",
-    "prepublish": "in-publish && [[ $TRAVIS ]] && ls dist/*.crx || in-install",
+    "prepublish": "in-publish && [ ! -z $TRAVIS_TAG ] && ls dist/*.crx || in-install",
     "test": "grunt"
   },
   "repository": {
