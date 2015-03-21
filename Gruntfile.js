@@ -68,12 +68,12 @@ module.exports = function (grunt) {
 
 		var shelljs = require("shelljs");
 		var passphraseEnvVarName = process.env["H5O_CRX_KEY_PASSPHRASE"] ? "H5O_CRX_KEY_PASSPHRASE" : "";
-		var res = shelljs.exec(grunt.template.process("./crxmake.sh dist/extension-standalone h5o-chrome.key " + passphraseEnvVarName));
+		var res = shelljs.exec(grunt.template.process("./build/crxmake.sh dist/extension-standalone ./build/h5o-chrome.key " + passphraseEnvVarName));
 		if (res.code !== 0) {
 			grunt.fail.fatal("Failed building the crx");
 		}
 		shelljs.mv("extension-standalone.crx", grunt.template.process("dist/outliner-v<%= pkg.version %>.crx"));
-		grunt.file.write("dist/crx-updates.xml", grunt.template.process(grunt.file.read("./crx-updates.xml.ejs"), {
+		grunt.file.write("dist/crx-updates.xml", grunt.template.process(grunt.file.read("./build/crx-updates.xml.ejs"), {
 			data: {
 				appId: "dopdihoblkcnhcniellcadnidfmnalmn",
 				version: manifest.version,
