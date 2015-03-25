@@ -6,6 +6,9 @@ env:
     - H5O_CRX=true
     - secure: "VavAKYR1h8NcTTPj+AQpFA4g5PbWgTa0CDi5pJTvw4Y27nvK6jUJ8E75BU3GNtkt4wRy2Cp0SAtYtC1MdFl8n7KiSFzgT1j7BqVYnMHwvHANAcS1stozKTJCPp2dVeNSOykBt9u9OknWTviXodaW1cXNpWFnnVXmXw8xBuo/5XM="
     - secure: "BnVLbW85kY3boaBkE9Q2B5EkBs6yEzbUgiUnk+QdkoHs1K1vvXlmQ4Sls5nJU6qKXIV/q2FUTLczfPYFUG76XsqTjWzFdfbs4sQ8OIKWsmSo9AylzKSRuaRJfIKkNdz6JmzQbFOEFal/wTAKYZca3UNIZ7c4hWQ0hMdg1n3rdYM="
+before_script:
+  - git config --global user.email "hello+travis@dominykas.com"
+  - git config --global user.name "Travis-CI (dominykas)"
 deploy:
   - provider: releases
     skip_cleanup: true
