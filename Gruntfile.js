@@ -46,7 +46,7 @@ module.exports = function (grunt) {
 			"options": {
 				base: "dist",
 				add: true,
-				repo: "git@github.com:h5o/h5o.github.io.git",
+				repo: "https://" + process.env.GH_TOKEN + "@github.com/h5o/h5o.github.io.git",
 				branch: "master"
 			},
 			"src": "crx-updates.xml"
