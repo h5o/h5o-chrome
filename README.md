@@ -22,6 +22,9 @@ Run `grunt` to produce `dist/extension/`
 
 ### v?.?.? (????-??-??) ###
 
+### v0.8.1 - v0.8.10 (2015-03) ###
+* Deployment automation
+
 ### v0.8.0 (2015-03-17) ###
 * Standalone crx release
 * Standalone release also asks for `file://*` permission
