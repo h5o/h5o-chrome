@@ -2,7 +2,7 @@
 
 The extension is [available on Chrome Store](https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo)
 
-Please see [the parent project](https://github.com/h5o/h5o-js) for the outlining code.
+See [h5o/h5o-js](https://github.com/h5o/h5o-js) for the outlining code library, visit https://h5o.github.io/ for details and bookmarklet.
 
 Published on npm, because it's JS. You can also "Load unpacked extension" from `dist/extension` in Chrome.
 
