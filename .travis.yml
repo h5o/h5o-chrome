@@ -1,6 +1,6 @@
 language: node_js
-node_js:
-  - "io.js"
+sudo: false
+node_js: "iojs-v2.5.0"
 env:
   global:
     - H5O_CRX=true
@@ -25,6 +25,6 @@ deploy:
     skip_cleanup: true
     email: "hello@dominykas.com"
     api_key:
-      secure: "E38DnCuORjp08iPoeII3PkkR2e6fM0uWJhOLe2ekBn5RLPSTzWlE8FGm7K73SiUE1l+LG3XWncq1rcmPQKGHC9qlUrc4+oz+9qnw4nuteuCVFbqzGoMPWbxNerXTpLslA07RYPc3FBHmexnVYy7n4KoYYn+66SdxAmR1RqFdZbw="
+      secure: "S7spbXk/I6KzvpKIU2h8mgVeD0LKAhSaWeNBKLvgkWm8xJRm2YIH4DYvLj0tayjzJWWDF2iLv7cKGYCeNeZlT+DGKDoVZow1iaxAhxP5ArU6cWS1FXAz2cXbcNwLqk29Y8HRHgkYDSyGJ0yL9ir8DP9cdn0+TlyG3qpGSZocdUs="
     on:
       tags: true

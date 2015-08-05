@@ -21,6 +21,10 @@ Run `grunt` to produce `dist/extension/`
 ## History ##
 
 ### v?.?.? (????-??-??) ###
+* ???
+
+### v0.8.12 ###
+* https://github.com/h5o/h5o-chrome/issues/10
 
 ### v0.8.1 - v0.8.11 (2015-03) ###
 * Deployment automation
