@@ -31,5 +31,14 @@
     "default_icon": "img/16.png",
     "default_title": "Outline",
     "default_popup": "popup.html"
+  },
+  "commands": {
+    "_execute_page_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "windows": "Alt+Shift+P",
+        "mac": "Alt+Shift+P"
+      }
+    }
   }
 }
