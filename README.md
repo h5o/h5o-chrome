@@ -23,7 +23,7 @@ Run `grunt` to produce `dist/extension/`
 ### v?.?.? (????-??-??) ###
 * ???
 
-### v0.8.13(2016-08-10)
+### v0.8.14(2016-08-10)
 
 - added suggested_key "Alt+Shift+P"
 
