@@ -23,7 +23,12 @@ Run `grunt` to produce `dist/extension/`
 ### v?.?.? (????-??-??) ###
 * ???
 
+### v0.8.15(2016-08-11)
+
+- added suggested_key "Alt+Shift+P"
+
 ### v0.8.12 ###
+
 * https://github.com/h5o/h5o-chrome/issues/10
 
 ### v0.8.1 - v0.8.11 (2015-03) ###
@@ -46,7 +51,7 @@ Run `grunt` to produce `dist/extension/`
 * Published on npm
 
 ### v0.5.1 and earlier ###
-Originally [lived on Google Code](https://code.google.com/p/h5o), if you like archeology 
+Originally [lived on Google Code](https://code.google.com/p/h5o), if you like archeology
 
 ## crxmake.sh ##
 
