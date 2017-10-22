@@ -27,6 +27,20 @@
       ]
     }
   ],
+  "commands":
+    {
+        "_execute_page_action":
+        {
+            "suggested_key":
+            {
+                "default": "Ctrl+I",
+                "chromeos": "Ctrl+I",
+                "linux": "Ctrl+I",
+                "mac": "MacCtrl+I",
+                "windows": "Ctrl+I"
+            }
+        }
+    },
   "page_action": {
     "default_icon": "img/16.png",
     "default_title": "Outline",
