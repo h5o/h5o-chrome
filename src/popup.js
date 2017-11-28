@@ -7,7 +7,7 @@ chrome.tabs.getSelected(null, function(tab)
 		oldOutline.parentNode.replaceChild(newOutline, oldOutline);
 		setTimeout(function () {
 			newOutline.appendChild(document.createRange().createContextualFragment(outline));
-			var links = elOutline.getElementsByTagName('a');
+			var links = newOutline.getElementsByTagName('a');
 			for (var i=0; i < links.length; i++) {
 				links[i].onclick=function(e) {
 					var lnk = e.target;
