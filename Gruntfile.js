@@ -95,7 +95,8 @@ module.exports = function (grunt) {
 
 		var manifest = grunt.file.readJSON("manifest.json");
 		manifest.version = grunt.config.get("pkg.version");
-		manifest.author = grunt.config.get("pkg.author");
+		manifest.author = grunt.config.get("pkg.author.name");
+		manifest.homepage_url = grunt.config.get("pkg.author.url");
 		grunt.file.write("dist/extension/manifest.json", JSON.stringify(manifest, null, "  "));
 
 	});
