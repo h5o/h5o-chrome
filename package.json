@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/h5o/h5o-chrome",
   "devDependencies": {
+    "dompurify": "1.x",
     "grunt": "0.4.x",
     "grunt-browserify": "3.x",
     "grunt-bump": "0.3.x",
