@@ -39,8 +39,8 @@ module.exports = function (grunt) {
 		"compress": {
 			"extension": {
 				"expand": true,
-				"cwd": "dist",
-				"src": ["extension/**"],
+				"cwd": "dist/extension",
+				"src": ["**"],
 				"options": {
 					"archive": "dist/outliner-v<%= pkg.version %>.zip"
 				}
