@@ -31,5 +31,8 @@
     "default_icon": "img/16.png",
     "default_title": "Outline",
     "default_popup": "popup.html"
-  }
+  },
+  "web_accessible_resources": [
+    "fonts/PT_Sans-Web-Regular.ttf"
+  ]
 }
