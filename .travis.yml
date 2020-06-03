@@ -1,30 +1,4 @@
 language: node_js
 sudo: false
-node_js: "iojs-v2.5.0"
-env:
-  global:
-    - H5O_CRX=true
-    # GH_TOKEN
-    - secure: "VavAKYR1h8NcTTPj+AQpFA4g5PbWgTa0CDi5pJTvw4Y27nvK6jUJ8E75BU3GNtkt4wRy2Cp0SAtYtC1MdFl8n7KiSFzgT1j7BqVYnMHwvHANAcS1stozKTJCPp2dVeNSOykBt9u9OknWTviXodaW1cXNpWFnnVXmXw8xBuo/5XM="
-    # H5O_CRX_KEY_PASSPHRASE
-    - secure: "BnVLbW85kY3boaBkE9Q2B5EkBs6yEzbUgiUnk+QdkoHs1K1vvXlmQ4Sls5nJU6qKXIV/q2FUTLczfPYFUG76XsqTjWzFdfbs4sQ8OIKWsmSo9AylzKSRuaRJfIKkNdz6JmzQbFOEFal/wTAKYZca3UNIZ7c4hWQ0hMdg1n3rdYM="
-before_script:
-  - git config --global user.email "hello+travis@dominykas.com"
-  - git config --global user.name "Travis-CI (dominykas)"
-deploy:
-  - provider: releases
-    skip_cleanup: true
-    file_glob: true
-    file:
-      - "dist/*.crx"
-    on:
-      tags: true
-    api_key:
-      secure: "Z3jQA/Ei2r1+CSVDxwfYrmfGKdjV2DGF3tFLsetuw+40skIlCS6xAFA54NGdRfAPGuw4KrvCPqoT6/NkWNMitNWfBTBCgatAlBANAAphDo101+vRLMdwmU9WmKkhRuuMSotOYc8h2kRwRmKyJ1fKK62NxYl3go8nzqmYYPqWEHQ="
-  - provider: npm
-    skip_cleanup: true
-    email: "hello@dominykas.com"
-    api_key:
-      secure: "S7spbXk/I6KzvpKIU2h8mgVeD0LKAhSaWeNBKLvgkWm8xJRm2YIH4DYvLj0tayjzJWWDF2iLv7cKGYCeNeZlT+DGKDoVZow1iaxAhxP5ArU6cWS1FXAz2cXbcNwLqk29Y8HRHgkYDSyGJ0yL9ir8DP9cdn0+TlyG3qpGSZocdUs="
-    on:
-      tags: true
+node_js:
+  - "12"
