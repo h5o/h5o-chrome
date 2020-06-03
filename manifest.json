@@ -11,9 +11,7 @@
     "scripts": ["background.js"]
   },
   "permissions": [
-    "tabs",
-    "http://*/*",
-    "https://*/*"
+    "activeTab"
   ],
   "content_scripts": [
     {
