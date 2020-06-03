@@ -13,6 +13,10 @@ module.exports = function (grunt) {
 				"src": ["node_modules/h5o/dist/outliner.min.js"],
 				"dest": "dist/extension/outliner.min.js"
 			},
+			"dompurify": {
+				"src": ["node_modules/dompurify/dist/purify.min.js"],
+				"dest": "dist/extension/purify.min.js"
+			},
 			"license": {
 				"expand": true,
 				"src": ["MIT-LICENSE.TXT", "README.md"],
@@ -35,8 +39,8 @@ module.exports = function (grunt) {
 		"compress": {
 			"extension": {
 				"expand": true,
-				"cwd": "dist",
-				"src": ["extension/**"],
+				"cwd": "dist/extension",
+				"src": ["**"],
 				"options": {
 					"archive": "dist/outliner-v<%= pkg.version %>.zip"
 				}
@@ -64,7 +68,7 @@ module.exports = function (grunt) {
 
 	grunt.registerTask("default", "Clean build", ["clean:all", "build", "crx", "compress"]);
 
-	grunt.registerTask("build", "Build unpacked extension", ["gen-manifest", "copy:h5o", "copy:extension", "copy:license", "copy:crx"]);
+	grunt.registerTask("build", "Build unpacked extension", ["gen-manifest", "copy:h5o", "copy:dompurify", "copy:extension", "copy:license", "copy:crx"]);
 
 	grunt.registerTask("crx", "Build the final crx", function () {
 		if (!process.env["H5O_CRX"]) return;
@@ -95,7 +99,8 @@ module.exports = function (grunt) {
 
 		var manifest = grunt.file.readJSON("manifest.json");
 		manifest.version = grunt.config.get("pkg.version");
-		manifest.author = grunt.config.get("pkg.author");
+		manifest.author = grunt.config.get("pkg.author.name");
+		manifest.homepage_url = grunt.config.get("pkg.author.url");
 		grunt.file.write("dist/extension/manifest.json", JSON.stringify(manifest, null, "  "));
 
 	});

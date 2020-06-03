@@ -1,9 +1,9 @@
-chrome.tabs.getSelected(null, function(tab)
+chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
 {
-	chrome.tabs.sendRequest(tab.id, {msg: "getOutline"}, function(outline)
+	chrome.tabs.sendMessage(tabs[0].id, {msg: "getOutline"}, function(outline)
 	{
 		var elOutline = document.getElementById('outline');
-		elOutline.innerHTML = outline;
+		elOutline.innerHTML = DOMPurify.sanitize(outline);
 		
 		var links = elOutline.getElementsByTagName('a');
 		for (var i=0; i < links.length; i++) {
@@ -13,7 +13,7 @@ chrome.tabs.getSelected(null, function(tab)
 				
 				e.preventDefault();
 				var id = lnk.href.substring(lnk.href.indexOf('#')+1);
-				chrome.tabs.sendRequest(tab.id, {msg: "jumpTo", id: id});
+				chrome.tabs.sendMessage(tabs[0].id, {msg: "jumpTo", id: id});
 			}
 		}
 	});
