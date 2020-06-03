@@ -23,8 +23,14 @@ Run `grunt` to produce `dist/extension/`
 ### v?.?.? (????-??-??) ###
 * ???
 
-### v0.8.12 ###
+### v0.8.14 ###
+* Reduced permission set
+
+### v0.8.13 ###
 * https://github.com/h5o/h5o-chrome/issues/10
+
+### v0.8.12 ###
+* No updates
 
 ### v0.8.1 - v0.8.11 (2015-03) ###
 * Deployment automation
