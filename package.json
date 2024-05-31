@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/h5o/h5o-chrome",
   "devDependencies": {
-    "grunt": "0.4.x",
+    "grunt": "1.5.x",
     "grunt-cli": "0.1.x",
     "grunt-contrib-clean": "0.6.x",
     "grunt-contrib-compress": "0.13.x",
